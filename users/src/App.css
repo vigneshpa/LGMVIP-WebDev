@@ -1,0 +1,175 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  background-color: #fe8f8fcc;
+  box-shadow: grey 0 0 3px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.nav button {
+  margin: auto;
+  padding: 0.5rem;
+  background-color: #ff5c58;
+  border-radius: 1rem;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+.nav button:hover {
+  background-color: rgb(235, 73, 70);
+}
+.nav button:active {
+  background-color: rgb(238, 95, 93);
+}
+.users {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 2rem;
+  padding: 3rem;
+}
+.users > div {
+  padding: 3rem;
+  box-shadow: gray 0 0 3px;
+  border-radius: 2rem;
+  background-color: #ffedd3;
+  display: flex;
+  justify-content: space-around;
+  max-width: 600px;
+  width: 75%;
+  margin: auto;
+  align-items: center;
+  animation: slide 0.5s ease;
+}
+@keyframes slide {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.user_details,
+.user_avatar {
+  width: 75%;
+  padding: 1rem;
+}
+.user_avatar > div {
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 128px;
+  height: 128px;
+  margin: auto;
+}
+.first_name {
+  font-size: 1.7rem;
+  color: rgb(47, 47, 47);
+}
+.last_name,
+.user_email {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: rgb(47, 47, 47);
+}
+
+body {
+  background-color: #fcd2d1;
+}
+
+@media only screen and (max-width: 1548px) {
+  .users {
+    grid-template-columns: auto auto;
+  }
+}
+@media only screen and (max-width: 1064px) {
+  .users {
+    grid-template-columns: auto;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .users {
+    padding: 0.25rem;
+  }
+  .users > div {
+    padding: 0.5rem;
+    width: 85%;
+  }
+  .first_name {
+    font-size: 1.5rem;
+  }
+  .last_name,
+  .user_email {
+    margin-top: 0.3rem;
+    font-size: 1rem;
+  }
+}
+.loading {
+  text-align: center;
+  padding-top: 5rem;
+}
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #ff5c58;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
