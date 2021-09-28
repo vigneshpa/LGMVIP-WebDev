@@ -1,0 +1,235 @@
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  --margin-top: 4rem;
+}
+@media screen and (max-width: 500px) {
+  :root {
+    font-size: 2.8vmin;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: #e1701a;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--margin-top);
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1;
+}
+nav > .title {
+  font-size: 1.5rem;
+  margin: 0 1.5rem 0 1rem;
+}
+nav > .lnk {
+  padding: 0.7rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s ease;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  height: 1.5rem;
+}
+nav > .push {
+  margin-left: auto;
+}
+nav > .lnk:hover {
+  background-color: #c56317;
+}
+
+nav > .lnk:active {
+  background-color: #a34b08;
+}
+nav > .logo {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 0.5rem 0 0.5rem 1rem;
+  filter: drop-shadow(0 0 5px rgb(65, 65, 65));
+}
+
+.content {
+  margin: 0;
+  padding: 0;
+  margin-top: var(--margin-top);
+}
+.content .title {
+  font-size: 2.5rem;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+.content .subtitle {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+.content .text {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+.content > section {
+  scroll-margin-top: var(--margin-top);
+  margin: 0;
+  padding: 2rem;
+  min-height: 35rem;
+  position: relative;
+  background-size: contain, contain;
+  background-repeat: no-repeat, repeat;
+  color: rgb(54, 54, 54);
+}
+.floating-slip {
+  min-height: 10rem;
+  position: absolute;
+  padding: 1.5rem;
+}
+.content > .introduction {
+  background-image: url(img/cherry-unsplash.jpg), linear-gradient(#addfd3, #b8e6d9, #b0e2d6, #addfd3);
+  background-position: right;
+}
+.content > .introduction > div {
+  position: absolute;
+  color: rgb(65, 65, 65);
+  top: 50%;
+  left: 40%;
+  transform: translate(-40%, -50%);
+  padding: 1.5rem;
+}
+.content > #about {
+  background-image: url(img/about-bg-unsplash.jpg), linear-gradient(#dde8ec, #dde8ec, #c6d5dc);
+  background-position: left;
+}
+.content > #about > div {
+  top: 50%;
+  right: 40%;
+  transform: translate(50%, -50%);
+  text-align: right;
+}
+.content > #order {
+  background-color: #d4df9d;
+  background-image: url(img/order-unsplash.jpg), linear-gradient(#020202, #050505, #070707, #060606);
+  color: white;
+  background-position: right;
+}
+.content > #contact {
+  text-align: center;
+  background-color: #d5d4cf;
+  background-image: url(img/contact-unsplash.jpg);
+  background-position: left;
+}
+.content > #contact form {
+  max-width: 35rem;
+  margin: auto;
+  text-align: left;
+  padding: 1rem 4rem;
+  background-color: rgba(255, 255, 255, 0.623);
+  border-radius: 1rem;
+}
+.content > #contact form label,
+.content > #contact form input,
+.content > #contact form textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.content > #contact form input,
+.content > #contact form textarea {
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  resize: vertical;
+  box-shadow: 0 0 5px #c25e129a;
+  border: none;
+  outline: none;
+  padding: 1rem;
+}
+.content > #contact form input[type='submit'] {
+  box-shadow: unset;
+  background-color: #e1701a;
+  margin: 1rem auto;
+  width: 30%;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.content > #contact form input[type='submit']:hover {
+  background-color: #c56317;
+}
+
+.content > #contact form input[type='submit']:active {
+  background-color: #a34b08;
+}
+
+.content > #contact form label {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+@media screen and (max-width: 760px) {
+  .content > #about,
+  .content > #order {
+    background-size: cover;
+    background-position: center;
+  }
+  .content > #about > div,
+  .content > .introduction > div {
+    background-color: rgba(255, 255, 255, 0.356);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: unset;
+    width: 80%;
+    transform: translate(-50%, -50%);
+  }
+}
+footer {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: 3rem;
+  background-color: #5a5a5a;
+  min-height: 20rem;
+}
+footer > .icons {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+footer > .icons > div {
+  padding: 0.5rem;
+}
+footer > .icons > .text {
+  margin: 0.2rem;
+}
+footer > .icons svg {
+  width: 3rem;
+  height: 3rem;
+}
+button {
+  background-color: #e1701a;
+  padding: 1rem;
+  color: black;
+  transition: background-color 0.3s ease;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  margin: 3rem;
+}
+button:hover {
+  background-color: #c56317;
+}
+
+button:active {
+  background-color: #a34b08;
+}
